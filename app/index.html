@@ -384,21 +384,112 @@
 	<div class="hidden"></div>
 	
 	<!-- form itself -->
-	<form id="form-calc" class="white-popup mfp-fade mfp-hide">
+	<form id="form-calc" class="white-popup mfp-fade mfp-hide" >
 		<h4>Рассчитать стоимость</h4>
 		
 		<div class="form-group">
-			<label for="exampleInputEmail1">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+			<label for="name">Ф.И.О. *</label>
+			<input type="text" required class="form-control" id="name" placeholder="">
 		</div>
 
 		<div class="form-group">
-			<label for="exampleInputEmail1">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+			<label for="company">Компания</label>
+			<input type="text" class="form-control" id="company" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label for="company">Сайт компании</label>
+			<input type="text" class="form-control" id="company" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label for="phone">Контактный телефон</label>
+			<input type="tel" placeholder="+7 (###) ###-##-##" class="form-control" id="phone" >
+		</div>
+
+		<div class="form-group">
+			<label for="email">E-mail</label>
+			<input type="email" class="form-control" id="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" placeholder="">
+		</div>
+
+		<div class="form-group">
+		<label for="type_film">Вид фильма *</label>
+		<select class="form-control" required aria-required="true" id="type_film" name="type_film">
+			<option value="">Выбрать</option>
+			<option value="t1">Презентационный</option>
+			<option value="t2">Обучающий</option>
+			<option value="t3">Юбилейный</option>
+			<option value="t4">Документальный</option>
+			<option value="t5">Юбилейный</option>
+			<option value="t6">Годовой отчет</option>
+			<option value="t7">Видеопрезентация</option>
+			<option value="t8">Реклама</option>
+			<option value="t9">Другое</option>
+		</select>
+		</div>
+
+		<div class="form-group">
+			<label for="time">Желаемый хронометраж *</label>
+			<input type="type" required class="form-control" id="time" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label for="taget">Цель фильма</label>
+			<textarea class="form-control" rows="4" id="target" placeholder="Для чего/кого снимаем?" ></textarea> 
+		</div>
+
+		<div class="form-group">
+			<label for="location">Локации *</label>
+			<textarea class="form-control" required rows="2" id="location" placeholder="Где снимаем?" ></textarea> 
+		</div>
+
+		<div class="form-group">
+			<label for="script">Написание сценарной концепции и сценария для фильма *</label>
+			<div class="radio">
+			    <input id="script_yes" type="radio" name="script" checked value="yes">
+			    <label for="script_yes">Да</label>
+			    <input id="script_no" type="radio" name="script" value="no">
+			    <label for="script_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="montag">Монтаж фильма *</label>
+			<div class="radio">
+			    <input id="montag_yes" type="radio" name="montag" checked value="yes">
+			    <label for="montag_yes">Да</label>
+			    <input id="montag_no" type="radio" name="montag" value="no">
+			    <label for="montag_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="tiraj_disks">Тиражирование дисков *</label>
+			<div class="radio">
+			    <input id="tiraj_disks_yes" type="radio" name="tiraj_disks" checked value="yes">
+			    <label for="tiraj_disks_yes">Да</label>
+			    <input id="tiraj_disks_no" type="radio" name="tiraj_disks" value="no">
+			    <label for="tiraj_disks_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="create_graphic">Создание графики *</label>
+			<div class="radio">
+			    <input id="create_graphic_yes" type="radio" name="create_graphic" checked value="yes">
+			    <label for="create_graphic_yes">Да</label>
+			    <input id="create_graphic_no" type="radio" name="create_graphic" value="no">
+			    <label for="create_graphic_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="dop_info">Дополнительная информация</label>
+			<textarea class="form-control" rows="2" id="dop_info" placeholder="" ></textarea> 
 		</div>
 
 		<div class="buttons-wrap">
-			<button class="buttons">Отправить</button>
+			<button type="submit" class="buttons">Отправить</button>
 		</div>
 
 	</form>
